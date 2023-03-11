@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
-  <title>New Password</title>
+  <title>Send Email</title>
   <style>
     :root{
       --white: #ffffff;
@@ -25,7 +25,7 @@
       font-family: 'Quicksand', sans-serif;
       margin: 0;
     }
-    .newPassword{
+    .sendEmail{
       display: grid;
       place-items: center;
       width: 100%;
@@ -34,19 +34,14 @@
     .form-container{
       display: grid;
       grid-template-rows: auto 1fr auto;
-      flex-direction: column;
-      justify-content: center;
+      justify-items: center;
+      width: 332px;
     }
     .logo{
       display: none;
       width: 150px;
       justify-self: center;
       margin-bottom: 48px;
-    }
-    @media (max-width: 600px) {
-      .logo{
-        display: block;
-      }
     }
     .title{
       font-size: var(--lg);
@@ -60,21 +55,16 @@
       margin-top: 0;
       margin-bottom: 25px;
     }
-    .form{
-      display: flex;
-      flex-direction: column;
-    }
-    .label{
-      font-size: var(--sm);
-      font-weight: bold;
-      margin-bottom: 4px;
-    }
-    .input{
+    .email-image{
       background-color: var(--text-input-field);
+      width: 132px;
+      height: 132px;
       border: none;
-      border-radius: 8px;
-      padding: 12px;
-      margin-bottom: 16px;
+      border-radius: 100px;
+      display: grid;
+      justify-items: center;
+      align-items: center;
+      margin-bottom: 32px;
     }
     .primary-button{
       color: var(--white);
@@ -85,23 +75,38 @@
       font-size: var(--md);
       font-weight: bold;
       margin-top: 12px;
+      width: 100%;
       cursor: pointer;
+    }
+    .resend{
+      font-size: var(--sm);
+      margin-top: 28px;
+    }
+    .resend .link{
+      color: var(--hospital-green);
+      text-decoration: none;
+    }
+    @media (max-width: 600px) {
+      .logo{
+        display: block;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="newPassword">
+  <div class="sendEmail">
     <div class="form-container">
       <img src="logos/logo_yard_sale.svg" alt="logo" class="logo">
-      <h1 class="title">Cereate a new Password</h1>
-      <p class="subtitle">Enter a new password for your account</p>
-      <form action="/" class="form">
-        <label for="password" class="label label-password">Password</label>
-        <input id="password" type="text" class="input input-password" placeholder="************">
-        <label for="newPassword" class="label label-new-password">Re-enter password</label>
-        <input id="newPassword" type="text" class="input input-new-password" placeholder="************">
-        <input type="submit" name="confirm" id="confirm" class="primary-button confirm-button" value="Confirm">
-      </form>
+      <h1 class="title">Email has been sent</h1>
+      <p class="subtitle">Please check your inbox for instructions on how toi reset the password</p>
+      <div class="email-image">
+        <img src="icons/email.svg" alt="email-image">
+      </div>
+      <button class="primary-button login-button">Login</button>
+      <p class="resend">
+        <span class="text">Didn't receive the email?</span>
+        <a class="link" href="/">Resend</a>
+      </p>
     </div>
   </div>
 </body>

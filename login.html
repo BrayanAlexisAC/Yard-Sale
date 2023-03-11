@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
-  <title>New Password</title>
+  <title>Login</title>
   <style>
     :root{
       --white: #ffffff;
@@ -25,7 +25,7 @@
       font-family: 'Quicksand', sans-serif;
       margin: 0;
     }
-    .newPassword{
+    .login{
       display: grid;
       place-items: center;
       width: 100%;
@@ -36,29 +36,13 @@
       grid-template-rows: auto 1fr auto;
       flex-direction: column;
       justify-content: center;
+      width: auto;
     }
     .logo{
       display: none;
-      width: 150px;
+      width: 200px;
       justify-self: center;
       margin-bottom: 48px;
-    }
-    @media (max-width: 600px) {
-      .logo{
-        display: block;
-      }
-    }
-    .title{
-      font-size: var(--lg);
-      justify-self: center;
-      margin-bottom: 4px;
-    }
-    .subtitle{
-      color: var(--very-light-pink);
-      font-size: var(--md);
-      text-align: center;
-      margin-top: 0;
-      margin-bottom: 25px;
     }
     .form{
       display: flex;
@@ -75,6 +59,8 @@
       border-radius: 8px;
       padding: 12px;
       margin-bottom: 16px;
+      width: 300px;
+      margin-bottom: 20px;
     }
     .primary-button{
       color: var(--white);
@@ -84,24 +70,52 @@
       padding: 16px;
       font-size: var(--md);
       font-weight: bold;
-      margin-top: 12px;
+      margin-top: 20px;
       cursor: pointer;
+    }
+    .forgot-my-psw{
+      color: var(--hospital-green);
+      font-size: var(--sm);
+      text-decoration: none;
+      text-align: center;
+      margin: 26px;
+    }
+    .secondary-button{
+      color: var(--hospital-green);
+      background-color: var(--white);
+      border: 1px solid var(--hospital-green);
+      border-radius: 12px;
+      padding: 16px;
+      font-size: var(--md);
+      font-weight: bold;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+    @media (max-width: 600px) {
+      .logo{
+        display: block;
+      }
+      .secondary-button{
+        position: absolute;
+        bottom: 36px;
+        width: 332px;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="newPassword">
+  <div class="login">
     <div class="form-container">
       <img src="logos/logo_yard_sale.svg" alt="logo" class="logo">
-      <h1 class="title">Cereate a new Password</h1>
-      <p class="subtitle">Enter a new password for your account</p>
       <form action="/" class="form">
+        <label for="email" class="label label-email">Email Address</label>
+        <input id="email" type="text" class="input input-email" placeholder="camilayokoo@gmail.com">
         <label for="password" class="label label-password">Password</label>
         <input id="password" type="text" class="input input-password" placeholder="************">
-        <label for="newPassword" class="label label-new-password">Re-enter password</label>
-        <input id="newPassword" type="text" class="input input-new-password" placeholder="************">
-        <input type="submit" name="confirm" id="confirm" class="primary-button confirm-button" value="Confirm">
+        <input type="submit" name="login" id="login" class="primary-button login-button" value="Log in">
+        <a class="forgot-my-psw" href="/">Forgot my password</a>
       </form>
+      <button class="secondary-button sign-up-button">Sign up</button>
     </div>
   </div>
 </body>
