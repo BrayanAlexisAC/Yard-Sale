@@ -56,28 +56,25 @@
       font-weight: bold;
       margin-bottom: 4px;
     }
-    .input{
-      background-color: var(--text-input-field);
-      border: none;
-      border-radius: 8px;
-      padding: 12px;
-      margin-bottom: 16px;
+    .value{
       width: 332px;
+      color: var(--very-light-pink);
+      margin: 8px 0px 34px 0px;
     }
     .input-name,
     .input-email-address,
     .input-password{
       margin-bottom: 24px;
     }
-    .primary-button{
-      color: var(--white);
-      background-color: var(--hospital-green);
-      border: none;
+    .secondary-button{
+      color: var(--hospital-green);
+      background-color: var(--white);
+      border: 1px solid var(--hospital-green);
       border-radius: 12px;
       padding: 16px;
       font-size: var(--md);
       font-weight: bold;
-      margin-top: 12px;
+      margin-top: 20px;
       cursor: pointer;
     }
     @media (max-width: 600px) {
@@ -94,13 +91,13 @@
       <form action="/" class="form">
         <div class="myAccount-info">
           <label for="name" class="label label-name">Name</label>
-          <input id="name" type="text" class="input input-name" placeholder="Camila Yokoo">
+          <p class="p value">Camila Yokoo</p>
           <label for="emailAddress" class="label label-email-address">Email Address</label>
-          <input id="emailAddress" type="text" class="input input-email-address" placeholder="camilayokoo@gmail.com">
+          <p class="p value">camilayokoo@gmail.com</p>
           <label for="password" class="label label-password">Password</label>
-          <input id="password" type="text" class="input input-password" placeholder="************">
+          <p class="p value">************</p>
         </div>
-        <input type="submit" name="create" id="create" class="primary-button create-button" value="Create">
+        <input type="submit" name="Edit" id="Edit" class="secondary-button Edit-button" value="Edit">
       </form>
     </div>
   </div>
