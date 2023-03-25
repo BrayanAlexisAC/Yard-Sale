@@ -25,9 +25,134 @@
       font-family: 'Quicksand', sans-serif;
       margin: 0;
     }
+    .nav-bar-container{
+      width: 100%;
+      border-bottom: 1px solid var(--very-light-pink);
+    }
+    .nav-bar{
+      display: grid;
+      grid-template-columns: auto 1fr 1fr;
+      align-items: center;
+      margin: 8px 40px;
+    }
+    .nav-bar-left 
+    .nav-bar-menu{
+      display: none;
+    }
+    .nav-bar-left 
+    .nav-bar-logo-desktop{
+      width: 140px;
+    }
+    .nav-bar-center {
+      align-items: center;
+    }
+    .nav-bar-center 
+    .nav-bar-logo-mobile{
+      display: none;
+    }
+    .nav-bar-center 
+    .nav-bar-list 
+    .nav-bar-list-categories{
+      list-style: none;
+      display: flex;
+      margin: 0px;
+    }
+    .nav-bar-center 
+    .nav-bar-list 
+    .nav-bar-list-categories 
+    .nav-bar-element{
+      margin: 0px 4px;
+    }
+    .nav-bar-center 
+    .nav-bar-list 
+    .nav-bar-list-categories 
+    .nav-bar-element a{
+      text-decoration: none;
+      color: var(--very-light-pink);
+      font-size: var(--md);
+      border: 1px solid var(--white);
+      border-radius: 8px;
+      padding: 4px 8px;
+    }
+    .nav-bar-center 
+    .nav-bar-list 
+    .nav-bar-list-categories 
+    .nav-bar-element a:hover{
+      color: var(--hospital-green);
+      border: 1px solid var(--hospital-green);
+    }
+    .nav-bar-right{
+      display: flex;
+      justify-content: end;
+      align-items: center;
+    }
+    .nav-bar-right
+    .nav-bar-account-link{
+      display: flex;
+      text-decoration: none;
+      color: var(--black);
+    }
+    .nav-bar-right
+    .nav-bar-account-link
+    .nav-bar-account-down-arrow{
+      width: 16px;
+      padding: 0px 2px;
+    }
+    .nav-bar-right
+    .nav-bar-cart{
+      margin: 0px;
+      margin-left: 16px;
+    }
+    .nav-bar-right
+    .nav-bar-cart
+    .nav-bar-cart-img{
+      position: relative;
+    }
+    .nav-bar-right
+    .nav-bar-cart
+    .nav-bar-cart-quantity{
+      position: fixed;
+      top: 8px;
+      right: 44px;
+      font-size: 8px;
+    }
+    @media (max-width:990px){
+      .nav-bar{
+        place-items: center;
+        grid-template-columns: auto 1fr auto;
+        margin: 8px 24px;
+      }
+      .nav-bar-left 
+      .nav-bar-menu{
+        display: flex;
+      }
+      .nav-bar-left 
+      .nav-bar-logo-desktop{
+        display: none;
+      }
+      .nav-bar-center 
+      .nav-bar-logo-mobile{
+        display: flex;
+      }
+      .nav-bar-center 
+      .nav-bar-list {
+        display: none;
+      }
+      .nav-bar-right
+      .nav-bar-account{
+        display: none;
+      }
+      .nav-bar-right
+      .nav-bar-cart
+      .nav-bar-cart-quantity{
+        top: 7px;
+        right: 28px;
+      } 
+    }
   </style>
 </head>
 <body>
+  <div class="nav-bar-container">   
     <nav class="nav-bar">
       <div class="nav-bar-left">
         <img class="nav-bar-menu" src="icons/icon_menu.svg" alt="menu">
@@ -35,7 +160,7 @@
       </div>
 
       <div class="nav-bar-center">
-        <img src="logos/logo_yard_sale.svg" alt="logo-yard-sale">
+        <img class="nav-bar-logo-mobile" src="logos/logo_yard_sale.svg" alt="logo-yard-sale">
         <div class="nav-bar-list">
           <ul class="nav-bar-list-categories">
             <li class="nav-bar-element">
@@ -61,14 +186,19 @@
       </div>
 
       <div class="nav-bar-right">
-        <div class="nav-bar-account">camilayokoo@gmail.com</div>
+        <div class="nav-bar-account">
+          <a class="nav-bar-account-link" href="/">
+            <span class="nav-bar-account-email">camilayokoo@gmail.com</span>
+            <img class="nav-bar-account-down-arrow" src="icons/down-arrow.svg" alt="down-arrow">
+          </a>
+        </div>
         <figure class="nav-bar-cart">
           <img class="nav-bar-cart-img" src="icons/icon_shopping_cart_notification.svg" alt="cart">
-          <div>2</div>
+          <div class="nav-bar-cart-quantity" >2</div>
         </figure>
       </div>
 
-
     </nav>
+  </div>
 </body>
 </html>
