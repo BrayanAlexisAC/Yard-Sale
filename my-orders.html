@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shorcut icon" href="logos/favicon_yard_sale.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+  <title>My Orders</title>
+  <style>
+    :root{
+      --white: #ffffff;
+      --black: #000000;
+      --dark: #236830;
+      --very-light-pink: #C7C7C7;
+      --text-input-field: #f7f7f7;
+      --hospital-green: #ACD9B2;
+      --sm: 14px;
+      --md: 16px;
+      --lg: 18px;
+    }
+    body{
+      font-family: 'Quicksand', sans-serif;
+      margin: 0;
+    }
+    .my-orders-container{
+      width: 100%;
+      height: 100vh;
+      display: grid;
+      grid-template-rows: auto 1fr;
+      justify-content: center;
+    }
+    .my-orders-content{
+      margin-top: 24px;
+    }
+    .my-orders-container .my-orders-title{
+      font-size: var(--lg);
+      width: 400px;
+    }
+    .my-orders-caracteristics {
+      border-radius: 12px;
+      width: auto;
+      height: 80px;
+      display: grid;
+      grid-template-columns: 1fr 1fr auto;
+      align-items: center;
+      margin: 0px;
+    }
+    .my-orders-caracteristics .my-orders-description{
+      display: flex;
+      flex-direction: column;
+    }
+    .my-orders-caracteristics .my-orders-description .my-orders-date{
+      font-size: var(--lg);
+      font-weight: bold;
+    }
+    .my-orders-caracteristics .my-orders-description .my-orders-quantity{
+      font-size: var(--md);
+      color: var(--very-light-pink);
+    }
+    .my-orders-caracteristics .my-orders-total{
+      font-size: var(--lg);
+      font-weight: bold;
+      text-align: end;
+    }
+    .my-orders-caracteristics .my-orders-image {
+      margin: 24px;
+    }
+    @media (max-width:640px){
+      .my-orders-container .my-orders-title{
+        display: none;
+      }
+      .my-orders-caracteristics {
+        width: 375px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="my-orders-container">
+    <h1 class="my-orders-title">My Orders</h1>
+    <div class="my-orders-content">
+
+      <div class="my-orders-caracteristics">
+        <p class="my-orders-description">
+          <span class="my-orders-date">04.25.2025</span>
+          <span class="my-orders-quantity">6 articles</span>
+        </p>
+        <p class="my-orders-total">
+          <span>$440.00</span>
+        </p>
+        <figure class="my-orders-image">
+          <img src="icons/flechita.svg" alt="arrow">
+        </figure>
+      </div>
+
+      <div class="my-orders-caracteristics">
+        <p class="my-orders-description">
+          <span class="my-orders-date">04.25.2025</span>
+          <span class="my-orders-quantity">6 articles</span>
+        </p>
+        <p class="my-orders-total">
+          <span>$440.00</span>
+        </p>
+        <figure class="my-orders-image">
+          <img src="icons/flechita.svg" alt="arrow">
+        </figure>
+      </div>
+
+      <div class="my-orders-caracteristics">
+        <p class="my-orders-description">
+          <span class="my-orders-date">04.25.2025</span>
+          <span class="my-orders-quantity">6 articles</span>
+        </p>
+        <p class="my-orders-total">
+          <span>$440.00</span>
+        </p>
+        <figure class="my-orders-image">
+          <img src="icons/flechita.svg" alt="arrow">
+        </figure>
+      </div>
+
+      <div class="my-orders-caracteristics">
+        <p class="my-orders-description">
+          <span class="my-orders-date">04.25.2025</span>
+          <span class="my-orders-quantity">6 articles</span>
+        </p>
+        <p class="my-orders-total">
+          <span>$440.00</span>
+        </p>
+        <figure class="my-orders-image">
+          <img src="icons/flechita.svg" alt="arrow">
+        </figure>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
