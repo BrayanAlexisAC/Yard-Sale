@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shorcut icon" href="logos/favicon_yard_sale.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+  <title>My Account</title>
+  <style>
+    :root{
+      --white: #ffffff;
+      --black: #000000;
+      --dark: #232830;
+      --very-light-pink: #C7C7C7;
+      --text-input-field: #f7f7f7;
+      --hospital-green: #ACD9B2;
+      --sm: 14px;
+      --md: 16px;
+      --lg: 18px;
+    }
+    body{
+      font-family: 'Quicksand', sans-serif;
+      margin: 0;
+    }
+    .myAccount{
+      display: grid;
+      place-items: center;
+      width: 100%;
+      height: 100vh;
+    }
+    .form-container{
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .title{
+      font-size: var(--lg);
+      justify-self: start;
+      margin-bottom: 40px;
+    }
+    .form{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .form .myAccount-info{
+      display: flex;
+      flex-direction: column;
+    }
+    .label{
+      font-size: var(--sm);
+      font-weight: bold;
+      margin-bottom: 4px;
+    }
+    .input{
+      background-color: var(--text-input-field);
+      border: none;
+      border-radius: 8px;
+      padding: 12px;
+      margin-bottom: 16px;
+      width: 332px;
+    }
+    .input-name,
+    .input-email-address,
+    .input-password{
+      margin-bottom: 24px;
+    }
+    .primary-button{
+      color: var(--white);
+      background-color: var(--hospital-green);
+      border: none;
+      border-radius: 12px;
+      padding: 16px;
+      font-size: var(--md);
+      font-weight: bold;
+      margin-top: 12px;
+      cursor: pointer;
+    }
+    @media (max-width: 600px) {
+      .form-container{
+        height: 95%;
+      }
+    }
+    </style>
+</head>
+<body>
+  <div class="myAccount">
+    <div class="form-container">
+      <h1 class="title">My account</h1>
+      <form action="/" class="form">
+        <div class="myAccount-info">
+          <label for="name" class="label label-name">Name</label>
+          <input id="name" type="text" class="input input-name" placeholder="Camila Yokoo">
+          <label for="emailAddress" class="label label-email-address">Email Address</label>
+          <input id="emailAddress" type="text" class="input input-email-address" placeholder="camilayokoo@gmail.com">
+          <label for="password" class="label label-password">Password</label>
+          <input id="password" type="text" class="input input-password" placeholder="************">
+        </div>
+        <input type="submit" name="create" id="create" class="primary-button create-button" value="Create">
+      </form>
+    </div>
+  </div>
+</body>
+</html>
