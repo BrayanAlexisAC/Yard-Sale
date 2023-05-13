@@ -146,6 +146,7 @@ body{
   border-radius: 5px;
   position: fixed;
   right: 108px;
+  box-shadow: 3px 7px 16px 0px rgba(0,0,0,0.2);
 }
 .menu-desktop .list{
   list-style: none;
