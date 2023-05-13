@@ -4,25 +4,76 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shorcut icon" href="logos/favicon_yard_sale.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
-  <title>Document</title>
-  <style>
-    :root{
-      --white: #ffffff;
-      --black: #000000;
-      --dark: #232830;
-      --very-light-pink: #C7C7C7;
-      --text-input-field: #f7f7f7;
-      --hospital-green: #ACD9B2;
-    }
-    body{
-      font-family: 'Quicksand', sans-serif;
-    }
-  </style>
+  <link rel="stylesheet" href="./styles/styles.css">
+  <title>Yard Sale</title>
 </head>
 <body>
-  Start Proyect
+  <div class="nav-bar-container">   
+    <nav class="nav-bar">
+      <div class="nav-bar-left">
+        <img class="nav-bar-menu" src="icons/icon_menu.svg" alt="menu">
+        <img class="nav-bar-logo-desktop" src="logos/logo_yard_sale.svg" alt="logo-yard-sale">
+      </div>
+
+      <div class="nav-bar-center">
+        <img class="nav-bar-logo-mobile" src="logos/logo_yard_sale.svg" alt="logo-yard-sale">
+        <div class="nav-bar-list">
+          <ul class="nav-bar-list-categories">
+            <li class="nav-bar-element">
+              <a href="/">ALL</a>
+            </li>
+            <li class="nav-bar-element">
+              <a href="/">Clothes</a>
+            </li>
+            <li class="nav-bar-element">
+              <a href="/">Electronics</a>
+            </li>
+            <li class="nav-bar-element">
+              <a href="/">Furniture</a>
+            </li>
+            <li class="nav-bar-element">
+              <a href="/">Toys</a>
+            </li>
+            <li class="nav-bar-element">
+              <a href="/">Others</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="nav-bar-right">
+        <div class="nav-bar-account">
+          <a class="nav-bar-account-link" href="#">
+            <span class="nav-bar-account-email">camilayokoo@gmail.com</span>
+            <img class="nav-bar-account-down-arrow" src="icons/down-arrow.svg" alt="down-arrow">
+          </a>
+        </div>
+        <figure class="nav-bar-cart">
+          <img class="nav-bar-cart-img" src="icons/icon_shopping_cart_notification.svg" alt="cart">
+          <div class="nav-bar-cart-quantity" >2</div>
+        </figure>
+      </div>
+
+    </nav>
+    <div class="menu-desktop inactive">
+      <ul class="list">
+        <li class="li-element">
+          <a href="/">My orders</a>
+        </li>
+        <li class="li-element">
+          <a href="/">My account</a>
+        </li>
+        <li class="li-last-element">
+          <a href="/">Sign out</a>
+        </li>
+      </ul>
+    </div>
+  </div>
 </body>
+<!-- scripts -->
+<script src="./js/main.js"></script>
 </html>
