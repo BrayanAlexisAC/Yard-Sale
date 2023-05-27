@@ -16,6 +16,12 @@ body{
 .inactive{
   display: none;
 }
+.btn-close{
+  position: fixed;
+  top: 64px;
+  right: 20px;
+}
+/* Nav Bar */
 .nav-bar-container{
   width: 100%;
   border-bottom: 1px solid var(--very-light-pink);
@@ -107,39 +113,7 @@ body{
   right: 44px;
   font-size: 8px;
 }
-@media (max-width:990px){
-  .nav-bar{
-    place-items: center;
-    grid-template-columns: auto 1fr auto;
-    margin: 8px 24px;
-  }
-  .nav-bar-left 
-  .nav-bar-menu{
-    display: flex;
-  }
-  .nav-bar-left 
-  .nav-bar-logo-desktop{
-    display: none;
-  }
-  .nav-bar-center 
-  .nav-bar-logo-mobile{
-    display: flex;
-  }
-  .nav-bar-center 
-  .nav-bar-list {
-    display: none;
-  }
-  .nav-bar-right
-  .nav-bar-account{
-    display: none;
-  }
-  .nav-bar-right
-  .nav-bar-cart
-  .nav-bar-cart-quantity{
-    top: 7px;
-    right: 28px;
-  } 
-}
+/* Menu Desktop */
 .menu-desktop{
   border: 1px solid var(--very-light-pink);
   width: 160px;
@@ -174,3 +148,89 @@ body{
 .menu-desktop .list .li-last-element a{
   color: var(--hospital-green);
 }
+/* Menu Desktop */
+.menu-mobile{
+  padding: 0px 40px 0px 40px;
+  box-sizing: border-box;
+  position: fixed;
+}
+.menu-mobile ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.menu-mobile a{
+  text-decoration: none;
+}
+.menu-mobile .list a{
+  color: var(--black);
+}
+.menu-mobile .list{
+  font-size: var(--lg);
+  font-weight: bold;
+}
+.menu-mobile .list:nth-child(2){
+  border-top: 1px solid var(--very-light-pink);
+}
+.menu-mobile .list .li-element{
+  margin: 36px 0px 36px 0px;
+}
+.menu-mobile .last-list{
+  margin-top: 100px;
+}
+.menu-mobile .last-list .li-element{
+  margin-bottom: 4px;
+}
+.menu-mobile .last-list .email{
+  color: var(--black);
+}
+.menu-mobile .last-list .login{
+  color: var(--hospital-green);
+  font-weight: bold;
+}
+
+@media (max-width:990px){
+  /* Nav Bar */
+  .nav-bar{
+    place-items: center;
+    grid-template-columns: auto 1fr auto;
+    margin: 8px 24px;
+  }
+  .nav-bar-left 
+  .nav-bar-menu{
+    display: flex;
+  }
+  .nav-bar-left 
+  .nav-bar-logo-desktop{
+    display: none;
+  }
+  .nav-bar-center 
+  .nav-bar-logo-mobile{
+    display: flex;
+  }
+  .nav-bar-center 
+  .nav-bar-list {
+    display: none;
+  }
+  .nav-bar-right
+  .nav-bar-account{
+    display: none;
+  }
+  .nav-bar-right
+  .nav-bar-cart
+  .nav-bar-cart-quantity{
+    top: 7px;
+    right: 28px;
+  }
+  /* Menu Desktop */
+  .menu-desktop{
+    display: none;
+  }
+}
+
+@media (min-width:991px){
+  /* Menu Mobile */
+  .menu-mobile{
+    display: none;
+  }
+} 
